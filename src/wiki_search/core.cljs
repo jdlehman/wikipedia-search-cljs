@@ -1,4 +1,4 @@
-(ns async-tut1.core
+(ns wiki-search.core
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [goog.dom :as dom]
             [goog.events :as events]
@@ -27,14 +27,6 @@
 (defn user-query []
   (.-value (dom/getElement "query")))
 
-(defn init []
-  (let [clicks (listen (dom/getElement "search") "click")
-        results-view (dom/getElement "results")]
-    (go (while true
-          (<! clicks)
-          (let [[_ results] (<! (jsonp (query-url (user-query))))]
-            (set! (.-innerHTML results-view) (render-query results)))))))
-
 (defn render-query [results]
   (str
     "<ul>"
@@ -42,5 +34,13 @@
            (for [result results]
              (str "<li>" result "</li>")))
     "</ul>"))
+
+(defn init []
+  (let [clicks (listen (dom/getElement "search") "click")
+        results-view (dom/getElement "results")]
+    (go (while true
+          (<! clicks)
+          (let [[_ results] (<! (jsonp (query-url (user-query))))]
+            (set! (.-innerHTML results-view) (render-query results)))))))
 
 (init)

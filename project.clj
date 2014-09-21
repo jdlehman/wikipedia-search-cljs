@@ -1,4 +1,4 @@
-(defproject async-tut1 "0.1.0-SNAPSHOT"
+(defproject wiki-search "0.1.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
@@ -11,10 +11,10 @@
   :source-paths ["src"]
 
   :cljsbuild {
-    :builds [{:id "async-tut1"
+    :builds [{:id "wiki-search"
               :source-paths ["src"]
               :compiler {
-                :output-to "async_tut1.js"
+                :output-to "wiki_search.js"
                 :output-dir "out"
                 :optimizations :none
                 :source-map true}}]})

@@ -7,4 +7,4 @@ goog.addDependency("../cljs/core/async/impl/channels.js", ['cljs.core.async.impl
 goog.addDependency("../cljs/core/async/impl/ioc_helpers.js", ['cljs.core.async.impl.ioc_helpers'], ['cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async/impl/timers.js", ['cljs.core.async.impl.timers'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.protocols']);
 goog.addDependency("../cljs/core/async.js", ['cljs.core.async'], ['cljs.core.async.impl.channels', 'cljs.core.async.impl.dispatch', 'cljs.core', 'cljs.core.async.impl.buffers', 'cljs.core.async.impl.protocols', 'cljs.core.async.impl.ioc_helpers', 'cljs.core.async.impl.timers']);
-goog.addDependency("../async_tut1/core.js", ['async_tut1.core'], ['goog.dom', 'goog.net.Jsonp', 'goog.Uri', 'cljs.core', 'cljs.core.async', 'goog.events']);
+goog.addDependency("../wiki_search/core.js", ['wiki_search.core'], ['goog.dom', 'goog.net.Jsonp', 'goog.Uri', 'cljs.core', 'cljs.core.async', 'goog.events']);
